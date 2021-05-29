@@ -18,7 +18,7 @@ class Navbar extends Component {
           <div className="search-container">
             <img
               className="search-icon"
-              src="https://image.flaticon.com/icons/svg/483/483356.svg"
+              src="https://image.flaticon.com/icons/png/512/622/622669.png"
               alt="search-icon"
             />
             <input placeholder="Search" />
@@ -47,7 +47,7 @@ class Navbar extends Component {
           <div className="right-nav">
             <div className="user">
               <img
-                src="https://image.flaticon.com/icons/png/512/949/949635.png"
+                src="https://image.flaticon.com/icons/png/512/3667/3667256.png"
                 alt="avatar-icon"
                 id="user-dp"
               />
