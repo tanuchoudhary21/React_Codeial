@@ -14,10 +14,9 @@ class Login extends Component {
     };
   }
 
- componentWillUnmount() {
-   this.props.dispatch(clearAuthState());
- }
- 
+  componentWillUnmount() {
+    this.props.dispatch(clearAuthState());
+  }
 
   handleEmailChange = (e) => {
     // console.log("Email: ", e.target.value);
@@ -47,9 +46,10 @@ class Login extends Component {
 
   render() {
     const { error, inProgress, isLoggedin } = this.props.auth;
+    const { from } = this.props.location.state || { from: { pathname: '/' } };
 
-    if(isLoggedin) {
-      return <Redirect to = '/' />;
+    if (isLoggedin) {
+      return <Redirect to= {from} />;
     }
 
     return (
@@ -77,16 +77,15 @@ class Login extends Component {
           />
         </div>
         <div className="field">
-        { inProgress ? (
-          <button onClick={this.handleFormSubmit} disabled = {inProgress} >
-            Loggin In...
-          </button>
-         ) : (
-          <button onClick={this.handleFormSubmit} disabled = {inProgress} >
-            Log In
-          </button>
-         )
-        }
+          {inProgress ? (
+            <button onClick={this.handleFormSubmit} disabled={inProgress}>
+              Loggin In...
+            </button>
+          ) : (
+            <button onClick={this.handleFormSubmit} disabled={inProgress}>
+              Log In
+            </button>
+          )}
           {/* <button onClick={this.handleFormSubmit} disabled = {inProgress} >Log In</button> */}
         </div>
       </form>
