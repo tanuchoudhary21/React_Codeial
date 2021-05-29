@@ -7,12 +7,12 @@ class PostsList extends Component {
     return (
       <div className="posts-list">
         {posts.map((post) => (
-          <div className="post-wrapper" key={post.id}>
+          <div className="post-wrapper" key={post._id}>
             <div className="post-header">
               {/* Post Avatar */}
               <div className="post-avatar">
                 <img
-                  src="https://img-premium.flaticon.com/png/512/2922/2922506.png?token=exp=1622264931~hmac=44074d43397f499bd7e0f0b87cbdfe9b"
+                  src="https://image.flaticon.com/icons/png/512/236/236831.png"
                   alt="Avatar"
                 />
 
