@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 class PostsList extends Component {
   render() {
-      const { posts } = this.props;
+    const { posts } = this.props;
     return (
       <div className="posts-list">
         {posts.map((post) => (
@@ -11,16 +12,16 @@ class PostsList extends Component {
             <div className="post-header">
               {/* Post Avatar */}
               <div className="post-avatar">
-                <img
-                  src="https://image.flaticon.com/icons/png/512/236/236831.png"
-                  alt="Avatar"
-                />
-
+                <Link to={`/user/${post.user._id}`}>
+                  <img
+                    src="https://image.flaticon.com/icons/png/512/924/924915.png"
+                    alt="Avatar"
+                  />
+                </Link>
                 <div>
                   <span className="post-author">{post.user.name}</span>
                   <span className="post-time">a minute age</span>
                 </div>
-
               </div>
               {/* Post Content */}
               <div className="post-content">{post.content}</div>
@@ -65,7 +66,7 @@ class PostsList extends Component {
 }
 
 PostsList.propTypes = {
-    posts : PropTypes.array.isRequired,
+  posts: PropTypes.array.isRequired,
 };
 
 export default PostsList;

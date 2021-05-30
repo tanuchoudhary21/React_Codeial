@@ -25,7 +25,7 @@ class Navbar extends React.Component {
         <div className="search-container">
           <img
             className="search-icon"
-            src="https://image.flaticon.com/icons/svg/483/483356.svg"
+            src="https://image.flaticon.com/icons/png/512/751/751463.png"
             alt="search-icon"
           />
           <input placeholder="Search" />
@@ -55,7 +55,7 @@ class Navbar extends React.Component {
             <div className="user">
             <Link to = '/settings' >
               <img
-                src="https://image.flaticon.com/icons/png/512/3667/3667256.png"
+                src="https://image.flaticon.com/icons/png/512/924/924915.png"
                 alt="user-dp"
                 id="user-dp"
               />

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { clearAuthState, editUser } from '../actions/auth';
 
@@ -38,7 +38,7 @@ class Settings extends React.Component {
       <div className="settings">
         <div className="img-container">
           <img
-            src="https://image.flaticon.com/icons/png/512/3667/3667256.png"
+            src="https://image.flaticon.com/icons/png/512/924/924915.png"
             alt="user-dp"
             id="user-dp"
           />
